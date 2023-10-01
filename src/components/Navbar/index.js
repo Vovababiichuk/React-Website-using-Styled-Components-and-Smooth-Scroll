@@ -13,13 +13,13 @@ import {
    NavBtnLink
 } from './NavbarElements';
 
-const Navbar = () => {
+export const Navbar = ({ toggle }) => {
    return (
       <Fragment>
          <Nav>
             <NavbarContainer>
                <NavLogo to="/">dolla</NavLogo>
-               <MobileIcon>
+               <MobileIcon onClick={toggle}>
                   <FaBars />
                </MobileIcon>
                <NavMenu>
@@ -45,4 +45,3 @@ const Navbar = () => {
    );
 };
 
-export default Navbar;
